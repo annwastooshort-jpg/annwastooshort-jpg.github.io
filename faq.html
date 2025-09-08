@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<title>FAQ</title>
 <style>
+  body {
+    margin: 0;
+    color: #331a00;
+    font-family: "Times New Roman", serif;
+    padding: 20px;
+  }
+
   h1, h2 {
     text-align: center;
-    font-family: "Times New Roman", serif;
+    color: #331a00;
   }
   h1 {
     font-size: 85px;
-    color: #331a00;
   }
   h2 {
     font-size: 40px;
-    color: #331a00;
     margin-top: 40px;
   }
   p {
-    color: #331a00;
-    font-family: "Times New Roman", serif;
     font-size: 24px;
+    margin: 5px 0;
   }
 
   /* Navbar styles */
@@ -28,27 +34,31 @@
   }
   .navdiv {
     display: flex;
-    align-items: left;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .navdiv ul {
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
   li {
     list-style: none;
-    display: inline-block;
   }
   li a {
     color: #ffddbd;
     font-size: 20px;
-    margin-left: 25px;
+    padding: 8px 12px;
     text-decoration: none;
-    font-family: "Times New Roman", serif;
+    display: inline-block;
   }
-  nav ul li a:hover {
+  li a:hover {
     background-color: white;
     color: black;
-    text-decoration: none;
+    border-radius: 5px;
   }
 
   /* FAQ styles */
@@ -65,19 +75,32 @@
     border-radius: 8px;
   }
   .faq-item h3 {
-    font-family: "Times New Roman", serif;
     font-size: 28px;
     margin-bottom: 10px;
-    color: #331a00;
   }
   .faq-item p {
     font-size: 22px;
     margin: 0;
   }
 
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .faq-item h3 {
+      font-size: 22px;
+    }
+    .faq-item p {
+      font-size: 18px;
+    }
+    li a {
+      font-size: 16px;
+    }
+  }
+
 </style>
 </head>
 <body>
+
+  <!-- Responsive Navigation -->
   <nav class="navbar">
     <div class="navdiv">
       <ul>
@@ -92,102 +115,86 @@
     </div>
   </nav>
 
-<!-- Page Content -->
-<h1>FAQ</h1>
-<p style="text-align:center; font-size: 28px; margin-top: 20px;">
-  Frequently Asked Questions + Ordering Process
-</p>
+  <h1>FAQ</h1>
+  <p style="text-align:center; font-size:28px; margin-top: 20px;">
+    Frequently Asked Questions + Ordering Process
+  </p>
 
-<div class="faq-section">
-  <div class="faq-item">
-    <h3>Q1: How do I place an order?</h3>
-    <p>A: Browse the catalogue, choose the item(s) you want, and contact me via Whatsapp! Relay your name and the code of the item(s) (the string of letters and numbers below the image).</p>
+  <div class="faq-section">
+    <div class="faq-item">
+      <h3>Q1: How do I place an order?</h3>
+      <p>A: Browse the catalogue, choose the item(s) you want, and contact me via Whatsapp! Relay your name and the code of the item(s).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q2: What payment methods do you accept?</h3>
+      <p>A: Cash only.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q3: How do I collect my order?</h3>
+      <p>A: In person (school, lessons, etc.).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q4: Can I return or exchange an item?</h3>
+      <p>A: No.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q5: Are your prices negotiable?</h3>
+      <p>A: No.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q6: Why is this website so bad?</h3>
+      <p>A: uhhhh</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q7: Are you hiring?</h3>
+      <p>A: No.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q8: Where do you source your items?</h3>
+      <p>A: Wouldn't you like to know?</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q9: Are there any discounts for bulk orders?</h3>
+      <p>A: Yes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q10: What materials are your pins made from?</h3>
+      <p>A: Enamel, with butterfly pin backings. Backings also available for $5.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q11: Are the rings adjustable?</h3>
+      <p>A: Most rings are adjustable.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q12: Do you restock sold-out items?</h3>
+      <p>A: Yes, popular items are restocked if I have the funds and willpower.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q13: When are you closing down?</h3>
+      <p>A: This may be the last restock, gotta focus on CSEC.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q14: Are your products safe for children?</h3>
+      <p>A: No.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q15: Why don’t you use grammar?</h3>
+      <p>A: uhhhhhhh</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q16: You are not funny twin</h3>
+      <p>A: Stay young, beautiful, and unique ☺♥♥♥</p>
+    </div>
+    <div class="faq-item">
+      <h3>Q17: Do you offer gift wrapping?</h3>
+      <p>A: No.</p>
+    </div>
   </div>
 
-  <div class="faq-item">
-    <h3>Q2: What payment methods do you accept?</h3>
-    <p>A: Cash only i dont have a credit card #minor</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q3: How do I collect my order?</h3>
-    <p>A: In person (school, lessons, are you my family/neighbour- come over), if you're an alien, I'll meet you on the moon; if you're from england pick up won't be possible. </p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q4: Can I return or exchange an item?</h3>
-    <p>A: no.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q5: Are your prices negociable?</h3>
-    <p>A: no.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q6:Why is this website so bad?</h3>
-    <p>A: uhhhh</p>
-  </div>
-</div><div class="faq-section">
-  <div class="faq-item">
-    <h3>Q7:Are you hiring</h3>
-    <p>A: no.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q8: Where do you source your items?</h3>
-    <p>A: wouldnt you like to know weather boy</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q9: Are there any discounts for bulk orders?</h3>
-    <p>A: yes </p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q10: What materials are your pins made from?</h3>
-    <p>A: Enamel- they also come with a butterfly pin backing, if you've never used one pls lmk i will show you (they can break if abused)</p>
-    <p> Pin backings also available for individual purchase $5 </p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q11: Are the rings adjustable?</h3>
-    <p>A: Most of the rings are adjustable.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q12: Do you restock sold-out items?</h3>
-    <p>A: Yes, popular items are restocked if i have the $$ and willpower </p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q13: When are you closing down??</h3>
-    <p>A:lowkey this may be the last restock, gotta #lockin for csec </p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q14: Are your products safe for children?</h3>
-    <p>A: no. </p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q15: why dont you use grammar you bum</h3>
-    <p>A: uhhhhhhh </p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q16: you are not funny twin</h3>
-    <p>A: stay young beautiful and unique ☺♥♥♥ </p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Q17: Do you offer gift wrapping?</h3>
-    <p>A: no. </p>
-  </div>
-
- </body>
-
+</body>
 </html>
+
+
 
 
 
