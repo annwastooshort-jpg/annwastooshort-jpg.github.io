@@ -1,125 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Catalogue of Doom</title>
-  <style>
-    /* General text styles */
-    body {
-      margin: 0;
-      color: #331a00;
-      padding: 20px;
-      font-family: "Times New Roman", serif;
-    }
-    h1 {
-      text-align: center;
-      font-size: 95px;
-    }
-    h2 {
-      text-align: center;
-      font-size: 55px;
-    }
-    p {
-      color: #331a00;
-    }
+<style>
+  /* General Styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", serif;
+    color: #331a00;
+  }
+  h1 {
+    text-align: center;
+    font-size: 85px;
+    color: #331a00;
+    margin-top: 20px;
+  }
+  p {
+    font-size: 28px;
+    text-align: center;
+    margin: 20px 10px;
+    color: #331a00;
+  }
 
-    /* Navbar styles */
-    .navbar {
-      overflow: hidden;
-      background-color: #331a00;
-      font-family: "Times New Roman", serif;
-    }
-    .navbar a {
-      float: left;
-      display: block;
-      color: #ffddbd;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-size: 20px;
-    }
-    .navbar a:hover {
-      background-color: white;
-      color: black;
-    }
-    .navbar .icon {
-      display: none;
-    }
+  /* Navbar Styles */
+  .navbar {
+    background: #331a00;
+    padding: 32px;
+  }
+  .navdiv {
+    display: flex;
+    justify-content: center;
+  }
+  .navdiv ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+  li a {
+    color: #ffddbd;
+    font-size: 20px;
+    margin-left: 25px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+  }
 
-    @media screen and (max-width: 768px) {
-      .navbar a {display: none;}
-      .navbar a.icon {
-        float: right;
-        display: block;
-        color: #ffddbd;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      .navbar.responsive {position: relative;}
-      .navbar.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-      .navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-      }
-    }
+  /* GIF/Image */
+  .center-img {
+    display: block;
+    margin: 40px auto;
+    width: 300px;
+    height: 400px;
+  }
 
-    /* Content links */
-    .content a:link {color: White; text-decoration: none;}
-    .content a:visited {color: LightGray; text-decoration: none;}
-    .content a:hover {color: CadetBlue; text-decoration: underline;}
-    .content a:active {color: White; text-decoration: underline;}
-  </style>
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 40px;
+    font-style: italic;
+  }
+
+</style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <div class="navbar" id="myNavbar">
-    <a href="index.html">Home</a>
-    <a href="pins.html">Pins</a>
-    <a href="floralpins.html">Floral pins</a>
-    <a href="goldrings.html">Gold Rings</a>
-    <a href="silverrings.html">Silver Rings</a>
-    <a href="noserings.html">Nose Rings</a>
-    <a href="faq.html">FAQ</a>
-    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">&#9776;</a>
-  </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navdiv">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pins.html">Pins</a></li>
+        <li><a href="floralpins.html">Floral pins</a></li>
+        <li><a href="goldrings.html">Gold Rings</a></li>
+        <li><a href="silverrings.html">Silver Rings</a></li>
+        <li><a href="noserings.html">Nose Rings</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Page Content -->
-  <h1 style="font-size: 85px;">Catalogue of Doom</h1>
+  <h1>Catalogue of Doom</h1>
+  <p>Hello and welcome to my current stock!!</p>
+  <p>Please use the navigation bar above to find your item of potential purchase (I worked hard on it).</p>
 
-  <p style="font-size: 28px; text-align: center; margin-top: 20px;">
-    Hello and welcome to my current stock!!
-  </p>
+  <!-- GIF -->
+  <img src="jumpingcat.gif" alt="Jumping Cat" class="center-img">
 
-  <p style="font-size: 28px; text-align: center; margin-top: 20px;">
-    Please use the navigation bar above to find your item of potential purchase (I worked hard on it)
-  </p>
-
-  <br><br>
-  <center>
-    <img src="jumpingcat.gif" width="300" height="400" alt="Paris 2024 Olympics">
-  </center>
-
-  <br><br><br>
-  <p style="font-size: 15px; text-align: center;">
-    <i>last updated 07/09/25</i>
-  </p>
-
-  <script>
-    function toggleNavbar() {
-      var x = document.getElementById("myNavbar");
-      if (x.className === "navbar") {
-        x.className += " responsive";
-      } else {
-        x.className = "navbar";
-      }
-    }
-  </script>
+  <!-- Footer -->
+  <p class="footer">last updated 07/09/25</p>
 
 </body>
 </html>
