@@ -1,72 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  h1 {
-    text-align: center;
-    font-family: "Times New Roman", serif;
-    font-size: 85px;
-  }
-  p {
-    color: #331a00;
-    font-family: "Times New Roman", serif;
-  }
+  <meta charset="UTF-8">
+  <title>Gold Rings</title>
+  <style>
+    /* General text styles */
+    body {
+      margin: 0;
+      color: #331a00;
+      padding: 20px;
+      font-family: "Times New Roman", serif;
+    }
+    h1 {
+      text-align: center;
+      font-size: 85px;
+    }
+    p {
+      color: #331a00;
+    }
 
-  /* Navbar styles */
-  .navbar {
-    background: #331a00;
-    padding: 32px;
-  }
-  .navdiv {
-    display: flex;
-    align-items: left;
-  }
-  .navdiv ul {
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    list-style: none;
-    display: inline-block;
-  }
-  li a {
-    color: #ffddbd;
-    font-size: 20px;
-    margin-left: 25px;
-    text-decoration: none;
-    font-family: "Times New Roman", serif;
-  }
-  nav ul li a:hover {
-    background-color: white;
-    color: black;
-    text-decoration: none;
-  }
+    /* Navbar styles */
+    * {
+      text-decoration: none;
+    }
+    .navbar {
+      background: #331a00;
+      padding: 32px;
+    }
+    .navdiv {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .navdiv ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    li {
+      list-style: none;
+    }
+    li a {
+      color: #ffddbd;
+      font-size: 20px;
+      padding: 8px 12px;
+      text-decoration: none;
+      font-family: "Times New Roman", serif;
+      display: inline-block;
+    }
+    li a:hover {
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+    }
 
-  /* Gallery styles */
-  .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px; /* space between images */
-    margin-top: 40px;
-  }
-  .gallery-item {
-    text-align: center;
-  }
-  .gallery-item img {
-    width: 255px;
-    height: 285px;
-    display: block;
-    margin-bottom: 10px; /* space between image and caption */
-  }
-  .gallery-item p {
-    font-size: 20px;
-    color: #331a00;
-  }
+    /* Gallery styles */
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .gallery-item {
+      text-align: center;
+    }
+    .gallery-item img {
+      width: 255px;
+      height: 285px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .gallery-item p {
+      font-size: 20px;
+      color: #331a00;
+      margin: 5px 0;
+    }
 
-</style>
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      .gallery-item img {
+        width: 180px;
+        height: 200px;
+      }
+      li a {
+        font-size: 16px;
+        margin: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Responsive Navigation -->
   <nav class="navbar">
     <div class="navdiv">
       <ul>
@@ -81,11 +111,12 @@
     </div>
   </nav>
 
-<!-- Page Content -->
-<h1 style="color: #331a00;">Gold Rings</h1>
-<p style="font-size: 36px; text-align: center; margin-top: 20px; color: #331a00;">
-All stainless steel and adjustable, can be adjsted upon collection :D
-</p>
+  <!-- Page Content -->
+  <h1>Gold Rings</h1>
+  <p style="font-size: 36px; text-align: center; margin-top: 20px;">
+    All stainless steel and adjustable, can be adjusted upon collection :D
+  </p>
+
 
 <!-- Image Gallery -->
 <div class="gallery">
@@ -157,6 +188,7 @@ All stainless steel and adjustable, can be adjsted upon collection :D
 </div>
 </body>
 </html>
+
 
 
 
