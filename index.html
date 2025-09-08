@@ -24,90 +24,82 @@
     }
 
     /* Navbar styles */
-    * {
-      text-decoration: none;
-    }
     .navbar {
-      background: #331a00; /* navbar background */
-      padding: 32px;
-    }
-    .navdiv {
-      display: flex;
-      align-items: left;
-    }
-    .navdiv ul {
-      padding: 0;
-      margin: 0;
-    }
-    li {
-      list-style: none;
-      display: inline-block;
-    }
-    li a {
-      color: #ffddbd; /* navbar text color */
-      font-size: 20px;
-      margin-left: 25px;
-      text-decoration: none;
+      overflow: hidden;
+      background-color: #331a00;
       font-family: "Times New Roman", serif;
     }
-    nav ul li a:hover {
+    .navbar a {
+      float: left;
+      display: block;
+      color: #ffddbd;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .navbar a:hover {
       background-color: white;
       color: black;
-      text-decoration: none;
+    }
+    .navbar .icon {
+      display: none;
     }
 
-    /* Content links (so they don’t override navbar) */
-    .content a:link {
-      color: White;
-      background-color: transparent;
-      text-decoration: none;
-      font-family: "Times New Roman", serif;
+    @media screen and (max-width: 768px) {
+      .navbar a {display: none;}
+      .navbar a.icon {
+        float: right;
+        display: block;
+        color: #ffddbd;
+      }
     }
-    .content a:visited {
-      color: LightGray;
-      background-color: transparent;
-      text-decoration: none;
+    @media screen and (max-width: 768px) {
+      .navbar.responsive {position: relative;}
+      .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
     }
-    .content a:hover {
-      color: CadetBlue;
-      background-color: transparent;
-      text-decoration: underline;
-    }
-    .content a:active {
-      color: White;
-      background-color: transparent;
-      text-decoration: underline;
-    }
+
+    /* Content links */
+    .content a:link {color: White; text-decoration: none;}
+    .content a:visited {color: LightGray; text-decoration: none;}
+    .content a:hover {color: CadetBlue; text-decoration: underline;}
+    .content a:active {color: White; text-decoration: underline;}
   </style>
 </head>
 <body>
+
   <!-- Navigation -->
-  <nav class="navbar">
-    <div class="navdiv">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pins.html">Pins</a></li>
-        <li><a href="floralpins.html">Floral pins</a></li>
-        <li><a href="goldrings.html">Gold Rings</a></li>
-        <li><a href="silverrings.html">Silver Rings</a></li>
-        <li><a href="noserings.html">Nose Rings</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="navbar" id="myNavbar">
+    <a href="index.html">Home</a>
+    <a href="pins.html">Pins</a>
+    <a href="floralpins.html">Floral pins</a>
+    <a href="goldrings.html">Gold Rings</a>
+    <a href="silverrings.html">Silver Rings</a>
+    <a href="noserings.html">Nose Rings</a>
+    <a href="faq.html">FAQ</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">&#9776;</a>
+  </div>
 
- <!-- Page Content -->
-<h1 style="font-size: 85px;">Catalogue of Doom</h1>
+  <!-- Page Content -->
+  <h1 style="font-size: 85px;">Catalogue of Doom</h1>
 
-<p style="font-size: 28px; text-align: center; margin-top: 20px;">
-  Hello and welcome to my current stock!!
-</p>
+  <p style="font-size: 28px; text-align: center; margin-top: 20px;">
+    Hello and welcome to my current stock!!
+  </p>
 
-<p style="font-size: 28px; text-align: center; margin-top: 20px;">
-  Please use the navigation bar above to find your item of potential purchase (I worked hard on it)
-</p>
+  <p style="font-size: 28px; text-align: center; margin-top: 20px;">
+    Please use the navigation bar above to find your item of potential purchase (I worked hard on it)
+  </p>
 
- 
   <br><br>
   <center>
     <img src="jumpingcat.gif" width="300" height="400" alt="Paris 2024 Olympics">
@@ -117,8 +109,22 @@
   <p style="font-size: 15px; text-align: center;">
     <i>last updated 07/09/25</i>
   </p>
+
+  <script>
+    function toggleNavbar() {
+      var x = document.getElementById("myNavbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+  </script>
+
 </body>
 </html>
+
+
 
 
 
